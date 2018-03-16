@@ -12,9 +12,12 @@ public class Shoptest {
 
     @Before
     public void before(){
-        guitar = new Guitar("Fender", "Black", "Guitar", 6, 150, 100);
+        guitar = new Guitar("Fender", "Black", "String", 6, 150, 100);
         shop = new Shop("The Reggae shop");
     }
+
+
+
 
     @Test
     public void canGetShopName(){
