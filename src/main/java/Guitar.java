@@ -3,7 +3,7 @@ public class Guitar extends Instruments implements IPlay, ISell {
     int strings;
 
 
-    public Guitar(String made, String colour, String type, int strings, int sellingprice, int buyingprice){
+    public Guitar(String made, String colour, String type, int strings, double sellingprice, double buyingprice){
         super(made, colour,type, sellingprice,buyingprice);
 
         this.strings = strings;
@@ -16,7 +16,10 @@ public class Guitar extends Instruments implements IPlay, ISell {
 
     public int getStrings(){return this.strings;}
 
-    public int getSellingprice(){return this.sellingprice;}
+//    public double getSellingprice(){return this.sellingprice;}
+//
+//    public double getBuyingprice(){return this.buyingprice;}
 
-    public int getBuyingprice(){return this.buyingprice;}
+
+
 }

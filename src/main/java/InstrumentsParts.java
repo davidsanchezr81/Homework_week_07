@@ -2,10 +2,10 @@ public abstract class InstrumentsParts {
 
         String made;
         String type;
-        int sellingprice;
-        int buyingprice;
+        double sellingprice;
+        double buyingprice;
 
-    public InstrumentsParts(String made, String type, int sellingprice, int buyingprice) {
+    public InstrumentsParts(String made, String type, double sellingprice, double buyingprice) {
         this.made = made;
         this.type = type;
         this.sellingprice = sellingprice;
@@ -21,8 +21,16 @@ public abstract class InstrumentsParts {
         return this.made;
     }
 
-    public int calculateMarkup(){
-        int markup = (sellingprice - buyingprice);
+    public double getSellingprice(){
+        return this.sellingprice;
+    }
+
+    public double getBuyingprice(){
+        return this.buyingprice;
+    }
+
+    public double calculateMarkup(){
+        double markup = (sellingprice - buyingprice)/buyingprice;
         return markup;
     }
 

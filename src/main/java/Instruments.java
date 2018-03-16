@@ -3,10 +3,10 @@ public abstract class Instruments implements ISell{
     String made;
     String colour;
     String type;
-    int sellingprice;
-    int buyingprice;
+    double sellingprice;
+    double buyingprice;
 
-    public Instruments(String made, String colour, String type, int sellingprice, int buyingprice) {
+    public Instruments(String made, String colour, String type, double sellingprice, double buyingprice) {
     this.made = made;
     this.colour = colour;
     this.type = type;
@@ -27,12 +27,16 @@ public abstract class Instruments implements ISell{
         return this.made;
     }
 
-    public int calculateMarkup(){
-        int markup = (sellingprice - buyingprice);
-        return markup;
+    public double getSellingprice(){
+        return this.sellingprice;
     }
 
+    public double getBuyingprice(){
+        return this.buyingprice;
+    }
 
-
-
+    public double calculateMarkup(){
+        double markup = (sellingprice - buyingprice)/buyingprice;
+        return markup;
+    }
 }

@@ -1,5 +1,5 @@
 public interface ISell {
 
-    int calculateMarkup();
+    double calculateMarkup();
 
 }
