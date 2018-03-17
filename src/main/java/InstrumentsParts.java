@@ -30,7 +30,7 @@ public abstract class InstrumentsParts {
     }
 
     public double calculateMarkup(){
-        double markup = (sellingprice - buyingprice)/buyingprice;
+        double markup = (sellingprice - buyingprice);
         return markup;
     }
 

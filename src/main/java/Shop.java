@@ -27,11 +27,24 @@ public class Shop {
         instrumentstock.remove(instrument);
     }
 
+
+    public void addInstrumentPartToStock(InstrumentsParts instrumentpart){
+        instrumentpartststock.add(instrumentpart);
+    }
+
+    public void removeInstrumentPartFromStock(InstrumentsParts instrumentpart){
+        instrumentpartststock.remove(instrumentpart);
+    }
+
     public int countInstruments(){
         return this.instrumentstock.size();
     }
 
-    public double totalProfit() {
+    public int countInstrumentsParts(){
+        return this.instrumentpartststock.size();
+    }
+
+    public double totalProfitOnInstruments() {
         double profit = 0;
         for(Instruments instrument : instrumentstock) {
             profit += instrument.calculateMarkup();
@@ -39,10 +52,13 @@ public class Shop {
         return profit;
     }
 
-
-
-
-
+    public double totalProfitOnInstrumentParts() {
+        double profitonparts = 0;
+        for(InstrumentsParts instrumentpart : instrumentpartststock) {
+            profitonparts += instrumentpart.calculateMarkup();
+        }
+        return profitonparts;
+    }
 
 
 }
