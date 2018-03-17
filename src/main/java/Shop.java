@@ -31,6 +31,17 @@ public class Shop {
         return this.instrumentstock.size();
     }
 
+    public double totalProfit() {
+        double profit = 0;
+        for(Instruments instrument : instrumentstock) {
+            profit += instrument.calculateMarkup();
+        }
+        return profit;
+    }
+
+
+
+
 
 
 

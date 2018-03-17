@@ -36,7 +36,7 @@ public abstract class Instruments implements ISell{
     }
 
     public double calculateMarkup(){
-        double markup = (sellingprice - buyingprice)/buyingprice;
+        double markup = (sellingprice - buyingprice);
         return markup;
     }
 }
