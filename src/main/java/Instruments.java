@@ -5,13 +5,15 @@ public abstract class Instruments implements ISell{
     String type;
     double sellingprice;
     double buyingprice;
+    private InstType instType;
 
-    public Instruments(String made, String colour, String type, double sellingprice, double buyingprice) {
+    public Instruments(String made, String colour, String type, double sellingprice, double buyingprice, InstType instType) {
     this.made = made;
     this.colour = colour;
     this.type = type;
     this.sellingprice = sellingprice;
     this.buyingprice = buyingprice;
+    this.instType = instType;
 
     }
 
@@ -33,6 +35,10 @@ public abstract class Instruments implements ISell{
 
     public double getBuyingprice(){
         return this.buyingprice;
+    }
+
+    public String getInstType(){
+        return this.instType.getType();
     }
 
     public double calculateMarkup(){

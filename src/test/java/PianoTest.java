@@ -9,7 +9,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano("Hemmingway", "White", "Keyboard", 1, 2000,1000);
+        piano = new Piano("Hemmingway", "White", "Keyboard", 1, 2000,1000, InstType.Piano );
 
     }
 
@@ -48,8 +48,13 @@ public class PianoTest {
     }
 
     @Test
+    public void canHaveInstrumentType(){
+        assertEquals("Keyboard", piano.getInstType());
+    }
+
+    @Test
     public void canCalculateMarkUp(){
-        assertEquals(1.00, piano.calculateMarkup(), 0.01);
+        assertEquals(1000.00, piano.calculateMarkup(), 0.01);
     }
 
 

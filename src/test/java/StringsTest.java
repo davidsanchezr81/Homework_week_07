@@ -34,7 +34,7 @@ public class StringsTest {
 
     @Test
     public void canCalculateMarkUp(){
-        assertEquals(1.00, strings.calculateMarkup(), 0.01);
+        assertEquals(5.00, strings.calculateMarkup(), 0.01);
     }
 
 }

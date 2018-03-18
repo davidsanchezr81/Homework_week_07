@@ -3,8 +3,8 @@ public class Guitar extends Instruments implements IPlay, ISell {
     int strings;
 
 
-    public Guitar(String made, String colour, String type, int strings, double sellingprice, double buyingprice){
-        super(made, colour,type, sellingprice,buyingprice);
+    public Guitar(String made, String colour, String type, int strings, double sellingprice, double buyingprice, InstType instType){
+        super(made, colour,type, sellingprice,buyingprice, instType);
 
         this.strings = strings;
 

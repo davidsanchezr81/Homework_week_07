@@ -14,8 +14,8 @@ public class Shoptest {
 
     @Before
     public void before(){
-        guitar = new Guitar("Fender", "Black", "String", 6, 150, 100);
-        guitar1 = new Guitar("Marshall", "White", "String", 4, 200, 100);
+        guitar = new Guitar("Fender", "Black", "String", 6, 150, 100, InstType.Guitar);
+        guitar1 = new Guitar("Marshall", "White", "String", 4, 200, 100,InstType.Guitar);
         strings = new Strings("Pitfall", "string", 20, 10);
         strings1 = new Strings("Wicked", "string", 30, 10);
         shop = new Shop("The Reggae shop");
